@@ -1,0 +1,276 @@
+local player = game.Players.LocalPlayer
+local TweenService = game:GetService("TweenService")
+local UserInputService = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
+
+-- Giriş sahnesi
+local introGui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
+introGui.Name = "AzrailIntro"
+introGui.ZIndexBehavior = Enum.ZIndexBehavior.Global
+introGui.IgnoreGuiInset = true
+
+local title = Instance.new("TextLabel", introGui)
+title.Size = UDim2.new(0, 400, 0, 80)
+title.Position = UDim2.new(0.5, -200, 0.4, -40)
+title.Text = "AzrailWare v666"
+title.TextColor3 = Color3.fromRGB(255, 0, 0)
+title.Font = Enum.Font.Fantasy
+title.TextScaled = true
+title.BackgroundTransparency = 1
+title.ZIndex = 100
+title.TextTransparency = 1
+TweenService:Create(title, TweenInfo.new(1), {TextTransparency = 0}):Play()
+task.wait(2)
+TweenService:Create(title, TweenInfo.new(1), {TextTransparency = 1}):Play()
+task.wait(1)
+title:Destroy()
+
+local skull = Instance.new("TextLabel", introGui)
+skull.Size = UDim2.new(0, 100, 0, 100)
+skull.Position = UDim2.new(0.5, -50, -0.2, 0)
+skull.Text = "💀"
+skull.TextColor3 = Color3.new(1, 1, 1)
+skull.Font = Enum.Font.GothamBlack
+skull.TextScaled = true
+skull.BackgroundTransparency = 1
+skull.ZIndex = 101
+TweenService:Create(skull, TweenInfo.new(1, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
+	Position = UDim2.new(0.5, -50, 0.4, 0)
+}):Play()
+task.wait(1.5)
+TweenService:Create(skull, TweenInfo.new(1), {TextTransparency = 1}):Play()
+task.wait(1)
+skull:Destroy()
+introGui:Destroy()
+
+-- Menü GUI
+local gui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
+gui.Name = "AzrailWareMenu"
+gui.ZIndexBehavior = Enum.ZIndexBehavior.Global
+gui.IgnoreGuiInset = true
+gui.ResetOnSpawn = false
+
+local frame = Instance.new("Frame", gui)
+frame.Size = UDim2.new(0, 640, 0, 460)
+frame.Position = UDim2.new(0.5, -320, 0.5, -230)
+frame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+frame.BorderSizePixel = 2
+frame.Active = true
+frame.Selectable = true
+frame.ZIndex = 100
+
+local titleLabel = Instance.new("TextLabel", frame)
+titleLabel.Size = UDim2.new(1, 0, 0, 40)
+titleLabel.Text = "AzrailWare v666"
+titleLabel.TextColor3 = Color3.new(1, 1, 1)
+titleLabel.BackgroundTransparency = 1
+titleLabel.Font = Enum.Font.Fantasy
+titleLabel.TextScaled = true
+titleLabel.ZIndex = 101
+
+local gradient = Instance.new("UIGradient", titleLabel)
+gradient.Rotation = 0
+gradient.Color = ColorSequence.new{
+	ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)),
+	ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 0, 255)),
+	ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 255, 0))
+}
+TweenService:Create(gradient, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, -1), {Rotation = 360}):Play()
+
+local buttonHolder = Instance.new("Frame", frame)
+buttonHolder.Size = UDim2.new(1, 0, 0, 50)
+buttonHolder.Position = UDim2.new(0, 0, 0, 40)
+buttonHolder.BackgroundTransparency = 1
+buttonHolder.ZIndex = 102
+
+local layout = Instance.new("UIListLayout", buttonHolder)
+layout.FillDirection = Enum.FillDirection.Horizontal
+layout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+layout.VerticalAlignment = Enum.VerticalAlignment.Center
+layout.Padding = UDim.new(0, 8)
+
+local function createButton(text, callback)
+	local btn = Instance.new("TextButton", buttonHolder)
+	btn.Size = UDim2.new(0, 140, 0, 32)
+	btn.Text = text
+	btn.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+	btn.TextColor3 = Color3.new(1, 1, 1)
+	btn.Font = Enum.Font.GothamBold
+	btn.TextScaled = true
+	btn.ZIndex = 110
+	btn.MouseButton1Click:Connect(callback)
+	return btn
+end
+-- Bilgilendirme etiketi
+local hintLabel = Instance.new("TextLabel", gui)
+hintLabel.Size = UDim2.new(0, 250, 0, 30)
+hintLabel.Position = UDim2.new(1, -260, 1, -40)
+hintLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+hintLabel.TextColor3 = Color3.new(1, 1, 1)
+hintLabel.Font = Enum.Font.GothamBold
+hintLabel.TextScaled = true
+hintLabel.Text = "menüyü geri açmak için End'e bas"
+hintLabel.Visible = false
+hintLabel.ZIndex = 110
+
+-- Speed Hack
+createButton("🏃‍♂️ Speed Hack", function()
+	local humanoid = player.Character and player.Character:FindFirstChildOfClass("Humanoid")
+	if humanoid then
+		humanoid.WalkSpeed = 100
+		local smoke = Instance.new("Smoke")
+		smoke.Color = Color3.new(1,1,1)
+		smoke.Size = 5
+		smoke.Opacity = 0.5
+		smoke.RiseVelocity = 5
+		smoke.Parent = player.Character:FindFirstChild("RightFoot") or humanoid.RootPart
+	end
+end)
+
+-- Aimbot
+local aimbotActive = false
+local aimbotButton = createButton("🎯 Aimbot: Kapalı", function()
+	aimbotActive = not aimbotActive
+	if aimbotActive then
+		aimbotButton.Text = "🎯 Aimbot: Aktif"
+		aimbotButton.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+	else
+		aimbotButton.Text = "🎯 Aimbot: Kapalı"
+		aimbotButton.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+	end
+end)
+aimbotButton.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+
+-- ESP Tuşu
+createButton("🔍 ESP", function()
+	for _, p in pairs(game.Players:GetPlayers()) do
+		if p ~= player and p.Character then
+			applyESP(p.Character, p)
+		end
+	end
+end)
+
+-- Menü kapatma
+createButton("❌ Menüyü Kapat", function()
+	frame.Visible = false
+	hintLabel.Visible = true
+	task.delay(6, function()
+		hintLabel.Visible = false
+	end)
+end)
+
+-- End tuşuyla geri açma
+UserInputService.InputBegan:Connect(function(input)
+	if input.KeyCode == Enum.KeyCode.End then
+		frame.Visible = true
+		hintLabel.Visible = false
+	end
+end)
+
+-- Sürüklenebilirlik
+titleLabel.InputBegan:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 then
+		local dragStart = input.Position
+		local startPos = frame.Position
+		local dragging = true
+		input.Changed:Connect(function()
+			if input.UserInputState == Enum.UserInputState.End then
+				dragging = false
+			end
+		end)
+		UserInputService.InputChanged:Connect(function(move)
+			if dragging and move.UserInputType == Enum.UserInputType.MouseMovement then
+				local delta = move.Position - dragStart
+				frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+			end
+		end)
+	end
+end)
+
+-- Aimbot hedefleme
+RunService.RenderStepped:Connect(function()
+	if not aimbotActive then return end
+	local cam = workspace.CurrentCamera
+	local myChar = player.Character
+	local myHead = myChar and myChar:FindFirstChild("Head")
+	if not cam or not myHead then return end
+
+	local closestTarget = nil
+	local shortestDistance = math.huge
+
+	for _, otherPlayer in pairs(game.Players:GetPlayers()) do
+		if otherPlayer ~= player and otherPlayer.Character and otherPlayer.Character:FindFirstChild("Head") then
+			if otherPlayer.Team == nil or otherPlayer.Team ~= player.Team then
+				local head = otherPlayer.Character.Head
+				local distance = (head.Position - cam.CFrame.Position).Magnitude
+				if distance < shortestDistance then
+					shortestDistance = distance
+					closestTarget = head
+				end
+			end
+		end
+	end
+
+	if closestTarget then
+		cam.CFrame = CFrame.new(cam.CFrame.Position, closestTarget.Position)
+	end
+end)
+local function applyESP(char, targetPlayer)
+	if targetPlayer == player then return end
+	if targetPlayer.Team and targetPlayer.Team == player.Team then return end
+
+	if not char:FindFirstChild("AzrailHighlight") then
+		local highlight = Instance.new("Highlight")
+		highlight.Name = "AzrailHighlight"
+		highlight.Adornee = char
+		highlight.FillTransparency = 1
+		highlight.OutlineColor = Color3.fromRGB(255, 0, 0)
+		highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+		highlight.Parent = char
+	end
+
+	if not char:FindFirstChild("AzrailTag") then
+		local tagGui = Instance.new("BillboardGui")
+		tagGui.Name = "AzrailTag"
+		tagGui.Size = UDim2.new(0, 200, 0, 50)
+		tagGui.Adornee = char:FindFirstChild("Head") or char:FindFirstChild("HumanoidRootPart")
+		tagGui.AlwaysOnTop = true
+		tagGui.StudsOffset = Vector3.new(0, 2.5, 0)
+		tagGui.Parent = char
+
+		local tagLabel = Instance.new("TextLabel", tagGui)
+		tagLabel.Size = UDim2.new(1, 0, 1, 0)
+		tagLabel.BackgroundTransparency = 1
+		tagLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+		tagLabel.Font = Enum.Font.GothamBold
+		tagLabel.TextScaled = true
+		tagLabel.Text = "Yükleniyor..."
+
+		task.spawn(function()
+			while tagGui.Parent and char and char:FindFirstChildOfClass("Humanoid") do
+				local hp = char:FindFirstChildOfClass("Humanoid").Health
+				tagLabel.Text = targetPlayer.DisplayName .. " - " .. math.floor(hp) .. " HP"
+				task.wait(0.5)
+			end
+		end)
+	end
+end
+
+local function monitorPlayer(p)
+	if p == player then return end
+	p.CharacterAdded:Connect(function(char)
+		task.wait(1)
+		applyESP(char, p)
+	end)
+	if p.Character then
+		applyESP(p.Character, p)
+	end
+end
+
+for _, p in pairs(game.Players:GetPlayers()) do
+	monitorPlayer(p)
+end
+
+game.Players.PlayerAdded:Connect(function(p)
+	monitorPlayer(p)
+end)
