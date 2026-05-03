@@ -1,0 +1,1301 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 68 | Scripts: 10 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui.Haçker Guyi
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[Haçker Guyi]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- StarterGui.Haçker Guyi.Frame
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Size"] = UDim2.new(0, 569, 0, 483);
+G2L["2"]["Position"] = UDim2.new(0.28571, 0, 0.21284, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Haçker Guyi.Frame.UICorner
+G2L["3"] = Instance.new("UICorner", G2L["2"]);
+G2L["3"]["CornerRadius"] = UDim.new(0.04, 8);
+
+
+-- StarterGui.Haçker Guyi.Frame.Frame
+G2L["4"] = Instance.new("Frame", G2L["2"]);
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(25, 25, 25);
+G2L["4"]["Size"] = UDim2.new(0, 569, 0, 51);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Haçker Guyi.Frame.Frame.UICorner
+G2L["5"] = Instance.new("UICorner", G2L["4"]);
+G2L["5"]["CornerRadius"] = UDim.new(0.04, 8);
+
+
+-- StarterGui.Haçker Guyi.Frame.Frame.UIStroke
+G2L["6"] = Instance.new("UIStroke", G2L["4"]);
+G2L["6"]["Thickness"] = 2;
+G2L["6"]["Color"] = Color3.fromRGB(255, 0, 5);
+
+
+-- StarterGui.Haçker Guyi.Frame.Frame.TextLabel
+G2L["7"] = Instance.new("TextLabel", G2L["4"]);
+G2L["7"]["TextWrapped"] = true;
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["TextSize"] = 14;
+G2L["7"]["TextScaled"] = true;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["7"]["TextColor3"] = Color3.fromRGB(255, 0, 5);
+G2L["7"]["BackgroundTransparency"] = 1;
+G2L["7"]["Size"] = UDim2.new(0, 569, 0, 50);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Text"] = [[Chainless V1.4]];
+
+
+-- StarterGui.Haçker Guyi.Frame.UIStroke
+G2L["8"] = Instance.new("UIStroke", G2L["2"]);
+G2L["8"]["Thickness"] = 2;
+G2L["8"]["Color"] = Color3.fromRGB(255, 0, 5);
+
+
+-- StarterGui.Haçker Guyi.Frame.Externals
+G2L["9"] = Instance.new("Frame", G2L["2"]);
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(31, 0, 0);
+G2L["9"]["Size"] = UDim2.new(0, 123, 0, 142);
+G2L["9"]["Position"] = UDim2.new(0.05975, 0, 0.14493, 0);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Name"] = [[Externals]];
+
+
+-- StarterGui.Haçker Guyi.Frame.Externals.Button
+G2L["a"] = Instance.new("Frame", G2L["9"]);
+G2L["a"]["BorderSizePixel"] = 0;
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["Size"] = UDim2.new(0, 109, 0, 43);
+G2L["a"]["Position"] = UDim2.new(0.05615, 0, 0.61724, 0);
+G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["Name"] = [[Button]];
+
+
+-- StarterGui.Haçker Guyi.Frame.Externals.Button.LocalScript
+G2L["b"] = Instance.new("LocalScript", G2L["a"]);
+
+
+
+-- StarterGui.Haçker Guyi.Frame.Externals.Button.UICorner
+G2L["c"] = Instance.new("UICorner", G2L["a"]);
+G2L["c"]["CornerRadius"] = UDim.new(0.4, 8);
+
+
+-- StarterGui.Haçker Guyi.Frame.Externals.Button.UIStroke
+G2L["d"] = Instance.new("UIStroke", G2L["a"]);
+G2L["d"]["Thickness"] = 5;
+G2L["d"]["Color"] = Color3.fromRGB(87, 0, 2);
+
+
+-- StarterGui.Haçker Guyi.Frame.Externals.Button.squiddyAl
+G2L["e"] = Instance.new("TextButton", G2L["a"]);
+G2L["e"]["BorderSizePixel"] = 0;
+G2L["e"]["TextSize"] = 14;
+G2L["e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["e"]["Size"] = UDim2.new(0, 27, 0, 27);
+G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e"]["Text"] = [[]];
+G2L["e"]["Name"] = [[squiddyAl]];
+G2L["e"]["Position"] = UDim2.new(0.092, 0, 0.186, 0);
+
+
+-- StarterGui.Haçker Guyi.Frame.Externals.Button.squiddyAl.a
+G2L["f"] = Instance.new("UICorner", G2L["e"]);
+G2L["f"]["Name"] = [[a]];
+G2L["f"]["CornerRadius"] = UDim.new(0.4, 8);
+
+
+-- StarterGui.Haçker Guyi.Frame.Externals.Button.squiddyAl.UIStroke
+G2L["10"] = Instance.new("UIStroke", G2L["e"]);
+G2L["10"]["Thickness"] = 5;
+G2L["10"]["Color"] = Color3.fromRGB(87, 0, 2);
+G2L["10"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.Haçker Guyi.Frame.Externals.UICorner
+G2L["11"] = Instance.new("UICorner", G2L["9"]);
+G2L["11"]["CornerRadius"] = UDim.new(0.04, 8);
+
+
+-- StarterGui.Haçker Guyi.Frame.Externals.TextLabel
+G2L["12"] = Instance.new("TextLabel", G2L["9"]);
+G2L["12"]["TextWrapped"] = true;
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["TextSize"] = 14;
+G2L["12"]["TextScaled"] = true;
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/Roboto.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["12"]["TextColor3"] = Color3.fromRGB(180, 0, 4);
+G2L["12"]["BackgroundTransparency"] = 1;
+G2L["12"]["Size"] = UDim2.new(0, 122, 0, 77);
+G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["Text"] = [[Externals / Fly, Esp Etc.]];
+
+
+-- StarterGui.Haçker Guyi.Frame.Troll
+G2L["13"] = Instance.new("Frame", G2L["2"]);
+G2L["13"]["BorderSizePixel"] = 0;
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(31, 0, 0);
+G2L["13"]["Size"] = UDim2.new(0, 123, 0, 142);
+G2L["13"]["Position"] = UDim2.new(0.39192, 0, 0.14493, 0);
+G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["Name"] = [[Troll]];
+
+
+-- StarterGui.Haçker Guyi.Frame.Troll.Button
+G2L["14"] = Instance.new("Frame", G2L["13"]);
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14"]["Size"] = UDim2.new(0, 109, 0, 43);
+G2L["14"]["Position"] = UDim2.new(0.05615, 0, 0.61724, 0);
+G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14"]["Name"] = [[Button]];
+
+
+-- StarterGui.Haçker Guyi.Frame.Troll.Button.LocalScript
+G2L["15"] = Instance.new("LocalScript", G2L["14"]);
+
+
+
+-- StarterGui.Haçker Guyi.Frame.Troll.Button.UICorner
+G2L["16"] = Instance.new("UICorner", G2L["14"]);
+G2L["16"]["CornerRadius"] = UDim.new(0.4, 8);
+
+
+-- StarterGui.Haçker Guyi.Frame.Troll.Button.UIStroke
+G2L["17"] = Instance.new("UIStroke", G2L["14"]);
+G2L["17"]["Thickness"] = 5;
+G2L["17"]["Color"] = Color3.fromRGB(87, 0, 2);
+
+
+-- StarterGui.Haçker Guyi.Frame.Troll.Button.Cb
+G2L["18"] = Instance.new("TextButton", G2L["14"]);
+G2L["18"]["BorderSizePixel"] = 0;
+G2L["18"]["TextSize"] = 14;
+G2L["18"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["18"]["Size"] = UDim2.new(0, 27, 0, 27);
+G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18"]["Text"] = [[]];
+G2L["18"]["Name"] = [[Cb]];
+G2L["18"]["Position"] = UDim2.new(0.09174, 0, 0.18605, 0);
+
+
+-- StarterGui.Haçker Guyi.Frame.Troll.Button.Cb.a
+G2L["19"] = Instance.new("UICorner", G2L["18"]);
+G2L["19"]["Name"] = [[a]];
+G2L["19"]["CornerRadius"] = UDim.new(0.4, 8);
+
+
+-- StarterGui.Haçker Guyi.Frame.Troll.Button.Cb.UIStroke
+G2L["1a"] = Instance.new("UIStroke", G2L["18"]);
+G2L["1a"]["Thickness"] = 5;
+G2L["1a"]["Color"] = Color3.fromRGB(87, 0, 2);
+G2L["1a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.Haçker Guyi.Frame.Troll.UICorner
+G2L["1b"] = Instance.new("UICorner", G2L["13"]);
+G2L["1b"]["CornerRadius"] = UDim.new(0.04, 8);
+
+
+-- StarterGui.Haçker Guyi.Frame.Troll.TextLabel
+G2L["1c"] = Instance.new("TextLabel", G2L["13"]);
+G2L["1c"]["TextWrapped"] = true;
+G2L["1c"]["BorderSizePixel"] = 0;
+G2L["1c"]["TextSize"] = 14;
+G2L["1c"]["TextScaled"] = true;
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Roboto.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["1c"]["TextColor3"] = Color3.fromRGB(180, 0, 4);
+G2L["1c"]["BackgroundTransparency"] = 1;
+G2L["1c"]["Size"] = UDim2.new(0, 122, 0, 77);
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["Text"] = [[Troll / Avatar Steal, Invisible Etc.]];
+
+
+-- StarterGui.Haçker Guyi.Frame.Skin Changers
+G2L["1d"] = Instance.new("Frame", G2L["2"]);
+G2L["1d"]["BorderSizePixel"] = 0;
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(31, 0, 0);
+G2L["1d"]["Size"] = UDim2.new(0, 123, 0, 142);
+G2L["1d"]["Position"] = UDim2.new(0.72408, 0, 0.14493, 0);
+G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["Name"] = [[Skin Changers]];
+
+
+-- StarterGui.Haçker Guyi.Frame.Skin Changers.Button
+G2L["1e"] = Instance.new("Frame", G2L["1d"]);
+G2L["1e"]["BorderSizePixel"] = 0;
+G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1e"]["Size"] = UDim2.new(0, 109, 0, 43);
+G2L["1e"]["Position"] = UDim2.new(0.05615, 0, 0.61724, 0);
+G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1e"]["Name"] = [[Button]];
+
+
+-- StarterGui.Haçker Guyi.Frame.Skin Changers.Button.LocalScript
+G2L["1f"] = Instance.new("LocalScript", G2L["1e"]);
+
+
+
+-- StarterGui.Haçker Guyi.Frame.Skin Changers.Button.UICorner
+G2L["20"] = Instance.new("UICorner", G2L["1e"]);
+G2L["20"]["CornerRadius"] = UDim.new(0.4, 8);
+
+
+-- StarterGui.Haçker Guyi.Frame.Skin Changers.Button.UIStroke
+G2L["21"] = Instance.new("UIStroke", G2L["1e"]);
+G2L["21"]["Thickness"] = 5;
+G2L["21"]["Color"] = Color3.fromRGB(87, 0, 2);
+
+
+-- StarterGui.Haçker Guyi.Frame.Skin Changers.Button.H
+G2L["22"] = Instance.new("TextButton", G2L["1e"]);
+G2L["22"]["BorderSizePixel"] = 0;
+G2L["22"]["TextSize"] = 14;
+G2L["22"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["22"]["Size"] = UDim2.new(0, 27, 0, 27);
+G2L["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22"]["Text"] = [[]];
+G2L["22"]["Name"] = [[H]];
+G2L["22"]["Position"] = UDim2.new(0.09174, 0, 0.18605, 0);
+
+
+-- StarterGui.Haçker Guyi.Frame.Skin Changers.Button.H.a
+G2L["23"] = Instance.new("UICorner", G2L["22"]);
+G2L["23"]["Name"] = [[a]];
+G2L["23"]["CornerRadius"] = UDim.new(0.4, 8);
+
+
+-- StarterGui.Haçker Guyi.Frame.Skin Changers.Button.H.UIStroke
+G2L["24"] = Instance.new("UIStroke", G2L["22"]);
+G2L["24"]["Thickness"] = 5;
+G2L["24"]["Color"] = Color3.fromRGB(87, 0, 2);
+G2L["24"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.Haçker Guyi.Frame.Skin Changers.UICorner
+G2L["25"] = Instance.new("UICorner", G2L["1d"]);
+G2L["25"]["CornerRadius"] = UDim.new(0.04, 8);
+
+
+-- StarterGui.Haçker Guyi.Frame.Skin Changers.TextLabel
+G2L["26"] = Instance.new("TextLabel", G2L["1d"]);
+G2L["26"]["TextWrapped"] = true;
+G2L["26"]["BorderSizePixel"] = 0;
+G2L["26"]["TextSize"] = 14;
+G2L["26"]["TextScaled"] = true;
+G2L["26"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["26"]["FontFace"] = Font.new([[rbxasset://fonts/families/Roboto.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["26"]["TextColor3"] = Color3.fromRGB(180, 0, 4);
+G2L["26"]["BackgroundTransparency"] = 1;
+G2L["26"]["Size"] = UDim2.new(0, 122, 0, 77);
+G2L["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["26"]["Text"] = [[Skin Changers / Arsenal, MM2 Etc.]];
+
+
+-- StarterGui.Haçker Guyi.Frame.Decal
+G2L["27"] = Instance.new("Decal", G2L["2"]);
+-- [ERROR] cannot convert TextureContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["27"]["Texture"] = [[http://www.roblox.com/asset/?id=11509756389]];
+-- [ERROR] cannot convert ColorMapContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["27"]["ColorMap"] = [[http://www.roblox.com/asset/?id=11509756389]];
+
+
+-- StarterGui.Haçker Guyi.Frame.Smooth Drag
+G2L["28"] = Instance.new("LocalScript", G2L["2"]);
+G2L["28"]["Name"] = [[Smooth Drag]];
+
+
+-- StarterGui.Haçker Guyi.Frame.LocalScript
+G2L["29"] = Instance.new("LocalScript", G2L["2"]);
+
+
+
+-- StarterGui.Haçker Guyi.ExternalsGui
+G2L["2a"] = Instance.new("Frame", G2L["1"]);
+G2L["2a"]["Visible"] = false;
+G2L["2a"]["BorderSizePixel"] = 0;
+G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(23, 0, 0);
+G2L["2a"]["Size"] = UDim2.new(0, 114, 0, 541);
+G2L["2a"]["Position"] = UDim2.new(0.0188, 0, 0.02021, 0);
+G2L["2a"]["BorderColor3"] = Color3.fromRGB(55, 0, 2);
+G2L["2a"]["Name"] = [[ExternalsGui]];
+
+
+-- StarterGui.Haçker Guyi.ExternalsGui.ButtonsFrame
+G2L["2b"] = Instance.new("Frame", G2L["2a"]);
+G2L["2b"]["BorderSizePixel"] = 0;
+G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(62, 0, 0);
+G2L["2b"]["Size"] = UDim2.new(0, 101, 0, 500);
+G2L["2b"]["Position"] = UDim2.new(0.05329, 0, 0.0647, 0);
+G2L["2b"]["BorderColor3"] = Color3.fromRGB(55, 0, 2);
+G2L["2b"]["Name"] = [[ButtonsFrame]];
+
+
+-- StarterGui.Haçker Guyi.ExternalsGui.ButtonsFrame.InfYield
+G2L["2c"] = Instance.new("TextButton", G2L["2b"]);
+G2L["2c"]["TextWrapped"] = true;
+G2L["2c"]["BorderSizePixel"] = 0;
+G2L["2c"]["TextSize"] = 14;
+G2L["2c"]["TextScaled"] = true;
+G2L["2c"]["TextColor3"] = Color3.fromRGB(255, 0, 5);
+G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2c"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2c"]["Size"] = UDim2.new(0, 91, 0, 42);
+G2L["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2c"]["Text"] = [[Infinite Yield]];
+G2L["2c"]["Name"] = [[InfYield]];
+G2L["2c"]["Position"] = UDim2.new(0.04765, 0, 0.02379, 0);
+
+
+-- StarterGui.Haçker Guyi.ExternalsGui.ButtonsFrame.InfYield.LocalScript
+G2L["2d"] = Instance.new("LocalScript", G2L["2c"]);
+
+
+
+-- StarterGui.Haçker Guyi.ExternalsGui.ButtonsFrame.FlyGui
+G2L["2e"] = Instance.new("TextButton", G2L["2b"]);
+G2L["2e"]["TextWrapped"] = true;
+G2L["2e"]["BorderSizePixel"] = 0;
+G2L["2e"]["TextSize"] = 14;
+G2L["2e"]["TextScaled"] = true;
+G2L["2e"]["TextColor3"] = Color3.fromRGB(255, 0, 5);
+G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2e"]["Size"] = UDim2.new(0, 91, 0, 42);
+G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["Text"] = [[Fly Gui v3.0]];
+G2L["2e"]["Name"] = [[FlyGui]];
+G2L["2e"]["Position"] = UDim2.new(0.04765, 0, 0.13257, 0);
+
+
+-- StarterGui.Haçker Guyi.ExternalsGui.ButtonsFrame.Esp
+G2L["2f"] = Instance.new("TextButton", G2L["2b"]);
+G2L["2f"]["TextWrapped"] = true;
+G2L["2f"]["BorderSizePixel"] = 0;
+G2L["2f"]["TextSize"] = 14;
+G2L["2f"]["TextScaled"] = true;
+G2L["2f"]["TextColor3"] = Color3.fromRGB(255, 0, 5);
+G2L["2f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2f"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2f"]["Size"] = UDim2.new(0, 91, 0, 42);
+G2L["2f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2f"]["Text"] = [[AzrailWare Esp v666]];
+G2L["2f"]["Name"] = [[Esp]];
+G2L["2f"]["Position"] = UDim2.new(0.04765, 0, 0.23857, 0);
+
+
+-- StarterGui.Haçker Guyi.ExternalsGui.ButtonsFrame.Esp.LocalScript
+G2L["30"] = Instance.new("LocalScript", G2L["2f"]);
+
+
+
+-- StarterGui.Haçker Guyi.ExternalsGui.ButtonsFrame.Grind
+G2L["31"] = Instance.new("TextButton", G2L["2b"]);
+G2L["31"]["TextWrapped"] = true;
+G2L["31"]["BorderSizePixel"] = 0;
+G2L["31"]["TextSize"] = 14;
+G2L["31"]["TextScaled"] = true;
+G2L["31"]["TextColor3"] = Color3.fromRGB(255, 0, 5);
+G2L["31"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["31"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["31"]["Size"] = UDim2.new(0, 91, 0, 42);
+G2L["31"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["31"]["Text"] = [[Pet Simulator Grind]];
+G2L["31"]["Name"] = [[Grind]];
+G2L["31"]["Position"] = UDim2.new(0.04765, 0, 0.34057, 0);
+
+
+-- StarterGui.Haçker Guyi.ExternalsGui.label
+G2L["32"] = Instance.new("TextLabel", G2L["2a"]);
+G2L["32"]["TextWrapped"] = true;
+G2L["32"]["TextStrokeTransparency"] = 0;
+G2L["32"]["BorderSizePixel"] = 0;
+G2L["32"]["TextSize"] = 14;
+G2L["32"]["TextStrokeColor3"] = Color3.fromRGB(215, 0, 5);
+G2L["32"]["TextScaled"] = true;
+G2L["32"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["32"]["FontFace"] = Font.new([[rbxasset://fonts/families/Roboto.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["32"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["32"]["Size"] = UDim2.new(0, 114, 0, 29);
+G2L["32"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["32"]["Text"] = [[Guistokrat By ImEnesTr]];
+G2L["32"]["Name"] = [[label]];
+
+
+-- StarterGui.Haçker Guyi.ExternalsGui.Smooth Drag
+G2L["33"] = Instance.new("LocalScript", G2L["2a"]);
+G2L["33"]["Name"] = [[Smooth Drag]];
+
+
+-- StarterGui.Haçker Guyi.TrollGui
+G2L["34"] = Instance.new("Frame", G2L["1"]);
+G2L["34"]["Visible"] = false;
+G2L["34"]["BorderSizePixel"] = 0;
+G2L["34"]["BackgroundColor3"] = Color3.fromRGB(23, 0, 0);
+G2L["34"]["Size"] = UDim2.new(0, 114, 0, 354);
+G2L["34"]["Position"] = UDim2.new(0.1203, 0, 0.02021, 0);
+G2L["34"]["BorderColor3"] = Color3.fromRGB(55, 0, 2);
+G2L["34"]["Name"] = [[TrollGui]];
+
+
+-- StarterGui.Haçker Guyi.TrollGui.ButtonsFrame
+G2L["35"] = Instance.new("Frame", G2L["34"]);
+G2L["35"]["BorderSizePixel"] = 0;
+G2L["35"]["BackgroundColor3"] = Color3.fromRGB(62, 0, 0);
+G2L["35"]["Size"] = UDim2.new(0, 101, 0, 311);
+G2L["35"]["Position"] = UDim2.new(0.05329, 0, 0.09887, 0);
+G2L["35"]["BorderColor3"] = Color3.fromRGB(55, 0, 2);
+G2L["35"]["Name"] = [[ButtonsFrame]];
+
+
+-- StarterGui.Haçker Guyi.TrollGui.ButtonsFrame.FEemotes
+G2L["36"] = Instance.new("TextButton", G2L["35"]);
+G2L["36"]["TextWrapped"] = true;
+G2L["36"]["BorderSizePixel"] = 0;
+G2L["36"]["TextSize"] = 14;
+G2L["36"]["TextScaled"] = true;
+G2L["36"]["TextColor3"] = Color3.fromRGB(255, 0, 5);
+G2L["36"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["36"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["36"]["Size"] = UDim2.new(0, 91, 0, 42);
+G2L["36"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["36"]["Text"] = [[FE Emotes Script]];
+G2L["36"]["Name"] = [[FEemotes]];
+G2L["36"]["Position"] = UDim2.new(0.04765, 0, 0.38648, 0);
+
+
+-- StarterGui.Haçker Guyi.TrollGui.ButtonsFrame.FEStarGlitcher
+G2L["37"] = Instance.new("TextButton", G2L["35"]);
+G2L["37"]["TextWrapped"] = true;
+G2L["37"]["BorderSizePixel"] = 0;
+G2L["37"]["TextSize"] = 14;
+G2L["37"]["TextScaled"] = true;
+G2L["37"]["TextColor3"] = Color3.fromRGB(255, 0, 5);
+G2L["37"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["37"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["37"]["Size"] = UDim2.new(0, 91, 0, 42);
+G2L["37"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["37"]["Text"] = [[FE StarGlitcher Script]];
+G2L["37"]["Name"] = [[FEStarGlitcher]];
+G2L["37"]["Position"] = UDim2.new(0.04765, 0, 0.56887, 0);
+
+
+-- StarterGui.Haçker Guyi.TrollGui.ButtonsFrame.CatalogAvatarScript
+G2L["38"] = Instance.new("TextButton", G2L["35"]);
+G2L["38"]["TextWrapped"] = true;
+G2L["38"]["BorderSizePixel"] = 0;
+G2L["38"]["TextSize"] = 14;
+G2L["38"]["TextScaled"] = true;
+G2L["38"]["TextColor3"] = Color3.fromRGB(255, 0, 5);
+G2L["38"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["38"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["38"]["Size"] = UDim2.new(0, 91, 0, 42);
+G2L["38"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["38"]["Text"] = [[Catalog Avatar Script]];
+G2L["38"]["Name"] = [[CatalogAvatarScript]];
+G2L["38"]["Position"] = UDim2.new(0.04765, 0, 0.03665, 0);
+
+
+-- StarterGui.Haçker Guyi.TrollGui.ButtonsFrame.FEInvisible
+G2L["39"] = Instance.new("TextButton", G2L["35"]);
+G2L["39"]["TextWrapped"] = true;
+G2L["39"]["BorderSizePixel"] = 0;
+G2L["39"]["TextSize"] = 14;
+G2L["39"]["TextScaled"] = true;
+G2L["39"]["TextColor3"] = Color3.fromRGB(255, 0, 5);
+G2L["39"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["39"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["39"]["Size"] = UDim2.new(0, 91, 0, 42);
+G2L["39"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["39"]["Text"] = [[FE Invisible Script]];
+G2L["39"]["Name"] = [[FEInvisible]];
+G2L["39"]["Position"] = UDim2.new(0.04765, 0, 0.21296, 0);
+
+
+-- StarterGui.Haçker Guyi.TrollGui.ButtonsFrame.CatalogSkyboxChanger
+G2L["3a"] = Instance.new("TextButton", G2L["35"]);
+G2L["3a"]["TextWrapped"] = true;
+G2L["3a"]["BorderSizePixel"] = 0;
+G2L["3a"]["TextSize"] = 14;
+G2L["3a"]["TextScaled"] = true;
+G2L["3a"]["TextColor3"] = Color3.fromRGB(255, 0, 5);
+G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3a"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3a"]["Size"] = UDim2.new(0, 91, 0, 42);
+G2L["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3a"]["Text"] = [[FE Catalog Avatar Skybox Changer]];
+G2L["3a"]["Name"] = [[CatalogSkyboxChanger]];
+G2L["3a"]["Position"] = UDim2.new(0.04765, 0, 0.74572, 0);
+
+
+-- StarterGui.Haçker Guyi.TrollGui.label
+G2L["3b"] = Instance.new("TextLabel", G2L["34"]);
+G2L["3b"]["TextWrapped"] = true;
+G2L["3b"]["TextStrokeTransparency"] = 0;
+G2L["3b"]["BorderSizePixel"] = 0;
+G2L["3b"]["TextSize"] = 14;
+G2L["3b"]["TextStrokeColor3"] = Color3.fromRGB(215, 0, 5);
+G2L["3b"]["TextScaled"] = true;
+G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Roboto.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3b"]["Size"] = UDim2.new(0, 114, 0, 29);
+G2L["3b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3b"]["Text"] = [[Guistokrat By ImEnesTr]];
+G2L["3b"]["Name"] = [[label]];
+
+
+-- StarterGui.Haçker Guyi.TrollGui.Smooth Drag
+G2L["3c"] = Instance.new("LocalScript", G2L["34"]);
+G2L["3c"]["Name"] = [[Smooth Drag]];
+
+
+-- StarterGui.Haçker Guyi.SkinChanger
+G2L["3d"] = Instance.new("Frame", G2L["1"]);
+G2L["3d"]["Visible"] = false;
+G2L["3d"]["BorderSizePixel"] = 0;
+G2L["3d"]["BackgroundColor3"] = Color3.fromRGB(23, 0, 0);
+G2L["3d"]["Size"] = UDim2.new(0, 114, 0, 431);
+G2L["3d"]["Position"] = UDim2.new(0.88797, 0, 0.0321, 0);
+G2L["3d"]["BorderColor3"] = Color3.fromRGB(55, 0, 2);
+G2L["3d"]["Name"] = [[SkinChanger]];
+
+
+-- StarterGui.Haçker Guyi.SkinChanger.ButtonsFrame
+G2L["3e"] = Instance.new("Frame", G2L["3d"]);
+G2L["3e"]["BorderSizePixel"] = 0;
+G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(62, 0, 0);
+G2L["3e"]["Size"] = UDim2.new(0, 101, 0, 388);
+G2L["3e"]["Position"] = UDim2.new(0.05329, 0, 0.08121, 0);
+G2L["3e"]["BorderColor3"] = Color3.fromRGB(55, 0, 2);
+G2L["3e"]["Name"] = [[ButtonsFrame]];
+
+
+-- StarterGui.Haçker Guyi.SkinChanger.ButtonsFrame.CounterBlox
+G2L["3f"] = Instance.new("TextButton", G2L["3e"]);
+G2L["3f"]["TextWrapped"] = true;
+G2L["3f"]["BorderSizePixel"] = 0;
+G2L["3f"]["TextSize"] = 14;
+G2L["3f"]["TextScaled"] = true;
+G2L["3f"]["TextColor3"] = Color3.fromRGB(255, 0, 5);
+G2L["3f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3f"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3f"]["Size"] = UDim2.new(0, 91, 0, 42);
+G2L["3f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3f"]["Text"] = [[CounterBlox Skin Changer]];
+G2L["3f"]["Name"] = [[CounterBlox]];
+G2L["3f"]["Position"] = UDim2.new(0.04765, 0, 0.33706, 0);
+
+
+-- StarterGui.Haçker Guyi.SkinChanger.ButtonsFrame.PetSimulator
+G2L["40"] = Instance.new("TextButton", G2L["3e"]);
+G2L["40"]["TextWrapped"] = true;
+G2L["40"]["BorderSizePixel"] = 0;
+G2L["40"]["TextSize"] = 14;
+G2L["40"]["TextScaled"] = true;
+G2L["40"]["TextColor3"] = Color3.fromRGB(255, 0, 5);
+G2L["40"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["40"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["40"]["Size"] = UDim2.new(0, 91, 0, 42);
+G2L["40"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["40"]["Text"] = [[Pet Simulator Pet Changer]];
+G2L["40"]["Name"] = [[PetSimulator]];
+G2L["40"]["Position"] = UDim2.new(0.04765, 0, 0.49714, 0);
+
+
+-- StarterGui.Haçker Guyi.SkinChanger.ButtonsFrame.MM2
+G2L["41"] = Instance.new("TextButton", G2L["3e"]);
+G2L["41"]["TextWrapped"] = true;
+G2L["41"]["BorderSizePixel"] = 0;
+G2L["41"]["TextSize"] = 14;
+G2L["41"]["TextScaled"] = true;
+G2L["41"]["TextColor3"] = Color3.fromRGB(255, 0, 5);
+G2L["41"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["41"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["41"]["Size"] = UDim2.new(0, 91, 0, 42);
+G2L["41"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["41"]["Text"] = [[MM2 Skin Changer]];
+G2L["41"]["Name"] = [[MM2]];
+G2L["41"]["Position"] = UDim2.new(0.04765, 0, 0.02379, 0);
+
+
+-- StarterGui.Haçker Guyi.SkinChanger.ButtonsFrame.Arsenal
+G2L["42"] = Instance.new("TextButton", G2L["3e"]);
+G2L["42"]["TextWrapped"] = true;
+G2L["42"]["BorderSizePixel"] = 0;
+G2L["42"]["TextSize"] = 14;
+G2L["42"]["TextScaled"] = true;
+G2L["42"]["TextColor3"] = Color3.fromRGB(255, 0, 5);
+G2L["42"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["42"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["42"]["Size"] = UDim2.new(0, 91, 0, 42);
+G2L["42"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["42"]["Text"] = [[Arsenal Skin Changer]];
+G2L["42"]["Name"] = [[Arsenal]];
+G2L["42"]["Position"] = UDim2.new(0.04765, 0, 0.18308, 0);
+
+
+-- StarterGui.Haçker Guyi.SkinChanger.label
+G2L["43"] = Instance.new("TextLabel", G2L["3d"]);
+G2L["43"]["TextWrapped"] = true;
+G2L["43"]["TextStrokeTransparency"] = 0;
+G2L["43"]["BorderSizePixel"] = 0;
+G2L["43"]["TextSize"] = 14;
+G2L["43"]["TextStrokeColor3"] = Color3.fromRGB(215, 0, 5);
+G2L["43"]["TextScaled"] = true;
+G2L["43"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["43"]["FontFace"] = Font.new([[rbxasset://fonts/families/Roboto.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["43"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["43"]["Size"] = UDim2.new(0, 114, 0, 29);
+G2L["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["43"]["Text"] = [[Guistokrat By ImEnesTr]];
+G2L["43"]["Name"] = [[label]];
+
+
+-- StarterGui.Haçker Guyi.SkinChanger.Smooth Drag
+G2L["44"] = Instance.new("LocalScript", G2L["3d"]);
+G2L["44"]["Name"] = [[Smooth Drag]];
+
+
+-- StarterGui.Haçker Guyi.Frame.Externals.Button.LocalScript
+local function C_b()
+local script = G2L["b"];
+	local TweenService = game:GetService("TweenService")
+	local UserInputService = game:GetService("UserInputService")
+	local Players = game:GetService("Players")
+	
+	local background = script.Parent
+	local circle = background:WaitForChild("squiddyAl")
+	
+	-- AÇILIP KAPANACAK MENÜYÜ BULMA
+	-- 'ExternalsGui' adındaki arayüzünü PlayerGui içinde arıyoruz
+	local playerGui = Players.LocalPlayer:WaitForChild("PlayerGui")
+	local externalsMenu = playerGui:FindFirstChild("ExternalsGui", true) -- "true" yaparak her yerde arar
+	
+	local isOn = false
+	local isDragging = false
+	
+	-- RENKLER
+	local offColor = Color3.fromRGB(0, 0, 0)
+	local onColor = Color3.fromRGB(255, 0, 0)
+	
+	-- POZİSYONLAR
+	local offPosition = UDim2.new(0.092, 0, 0.186, 0)
+	local onPosition = UDim2.new(0.633, 0, 0.186, 0)
+	
+	local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Sine, Enum.EasingDirection.Out)
+	
+	-- Duruma göre pozisyona yumuşakça oturtma fonksiyonu
+	local function snapToPosition(state)
+		isOn = state
+		local targetPosition = isOn and onPosition or offPosition
+		local targetColor = isOn and onColor or offColor
+	
+		TweenService:Create(circle, tweenInfo, {
+			Position = targetPosition,
+			BackgroundColor3 = targetColor
+		}):Play()
+	
+		-- --- ARAYÜZÜ GÖRÜNÜR / GÖRÜNMEZ YAPMA ---
+		if externalsMenu then
+			externalsMenu.Visible = isOn
+		end
+	
+		-- Tetiklenecek fonksiyonlar
+		if isOn then
+			print("Özellik Açıldı!")
+		else
+			print("Özellik Kapandı!")
+		end
+	end
+	
+	-- Sürükleme başladığında
+	circle.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			isDragging = true
+		end
+	end)
+	
+	-- Mouse hareket ettikçe yuvarlağı takip ettirme
+	UserInputService.InputChanged:Connect(function(input)
+		if isDragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+			-- Arka planın genişliğini ve mouse'un o anki yerini hesaplıyoruz
+			local bgX = background.AbsolutePosition.X
+			local bgWidth = background.AbsoluteSize.X
+			local mouseX = input.Position.X
+	
+			-- Yeni X pozisyonunu yüzdelik (Scale) olarak hesapla
+			local newX = (mouseX - bgX) / bgWidth
+	
+			-- Yuvarlağın dışarı taşmasını engelle
+			newX = math.clamp(newX, 0.092, 0.633)
+	
+			-- Yuvarlağın sadece X ekseninde hareket etmesini sağla
+			circle.Position = UDim2.new(newX, 0, circle.Position.Y.Scale, 0)
+		end
+	end)
+	
+	-- Mouse bırakıldığında
+	UserInputService.InputEnded:Connect(function(input)
+		if isDragging and (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then
+			isDragging = false
+	
+			-- Bırakıldığı yer butonun ortasından sağda mı solda mı?
+			local currentX = circle.Position.X.Scale
+			local midPoint = (0.092 + 0.633) / 2
+	
+			if currentX >= midPoint then
+				snapToPosition(true)
+			else
+				snapToPosition(false)
+			end
+		end
+	end)
+	
+	-- İlk başlangıçta kapalı başlasın
+	snapToPosition(false)
+end;
+task.spawn(C_b);
+-- StarterGui.Haçker Guyi.Frame.Troll.Button.LocalScript
+local function C_15()
+local script = G2L["15"];
+	local TweenService = game:GetService("TweenService")
+	local UserInputService = game:GetService("UserInputService")
+	local Players = game:GetService("Players")
+	
+	local background = script.Parent
+	local circle = background:WaitForChild("Cb")
+	
+	-- AÇILIP KAPANACAK MENÜYÜ BULMA
+	-- 'ExternalsGui' adındaki arayüzünü PlayerGui içinde arıyoruz
+	local playerGui = Players.LocalPlayer:WaitForChild("PlayerGui")
+	local externalsMenu = playerGui:FindFirstChild("TrollGui", true) -- "true" yaparak her yerde arar
+	
+	local isOn = false
+	local isDragging = false
+	
+	-- RENKLER
+	local offColor = Color3.fromRGB(0, 0, 0)
+	local onColor = Color3.fromRGB(255, 0, 0)
+	
+	-- POZİSYONLAR
+	local offPosition = UDim2.new(0.092, 0, 0.186, 0)
+	local onPosition = UDim2.new(0.633, 0, 0.186, 0)
+	
+	local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Sine, Enum.EasingDirection.Out)
+	
+	-- Duruma göre pozisyona yumuşakça oturtma fonksiyonu
+	local function snapToPosition(state)
+		isOn = state
+		local targetPosition = isOn and onPosition or offPosition
+		local targetColor = isOn and onColor or offColor
+	
+		TweenService:Create(circle, tweenInfo, {
+			Position = targetPosition,
+			BackgroundColor3 = targetColor
+		}):Play()
+	
+		-- --- ARAYÜZÜ GÖRÜNÜR / GÖRÜNMEZ YAPMA ---
+		if externalsMenu then
+			externalsMenu.Visible = isOn
+		end
+	
+		-- Tetiklenecek fonksiyonlar
+		if isOn then
+			print("Özellik Açıldı!")
+		else
+			print("Özellik Kapandı!")
+		end
+	end
+	
+	-- Sürükleme başladığında
+	circle.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			isDragging = true
+		end
+	end)
+	
+	-- Mouse hareket ettikçe yuvarlağı takip ettirme
+	UserInputService.InputChanged:Connect(function(input)
+		if isDragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+			-- Arka planın genişliğini ve mouse'un o anki yerini hesaplıyoruz
+			local bgX = background.AbsolutePosition.X
+			local bgWidth = background.AbsoluteSize.X
+			local mouseX = input.Position.X
+	
+			-- Yeni X pozisyonunu yüzdelik (Scale) olarak hesapla
+			local newX = (mouseX - bgX) / bgWidth
+	
+			-- Yuvarlağın dışarı taşmasını engelle
+			newX = math.clamp(newX, 0.092, 0.633)
+	
+			-- Yuvarlağın sadece X ekseninde hareket etmesini sağla
+			circle.Position = UDim2.new(newX, 0, circle.Position.Y.Scale, 0)
+		end
+	end)
+	
+	-- Mouse bırakıldığında
+	UserInputService.InputEnded:Connect(function(input)
+		if isDragging and (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then
+			isDragging = false
+	
+			-- Bırakıldığı yer butonun ortasından sağda mı solda mı?
+			local currentX = circle.Position.X.Scale
+			local midPoint = (0.092 + 0.633) / 2
+	
+			if currentX >= midPoint then
+				snapToPosition(true)
+			else
+				snapToPosition(false)
+			end
+		end
+	end)
+	
+	-- İlk başlangıçta kapalı başlasın
+	snapToPosition(false)
+end;
+task.spawn(C_15);
+-- StarterGui.Haçker Guyi.Frame.Skin Changers.Button.LocalScript
+local function C_1f()
+local script = G2L["1f"];
+	local TweenService = game:GetService("TweenService")
+	local UserInputService = game:GetService("UserInputService")
+	local Players = game:GetService("Players")
+	
+	local background = script.Parent
+	local circle = background:WaitForChild("H")
+	
+	-- AÇILIP KAPANACAK MENÜYÜ BULMA
+	-- 'ExternalsGui' adındaki arayüzünü PlayerGui içinde arıyoruz
+	local playerGui = Players.LocalPlayer:WaitForChild("PlayerGui")
+	local externalsMenu = playerGui:FindFirstChild("SkinChanger", true) -- "true" yaparak her yerde arar
+	
+	local isOn = false
+	local isDragging = false
+	
+	-- RENKLER
+	local offColor = Color3.fromRGB(0, 0, 0)
+	local onColor = Color3.fromRGB(255, 0, 0)
+	
+	-- POZİSYONLAR
+	local offPosition = UDim2.new(0.092, 0, 0.186, 0)
+	local onPosition = UDim2.new(0.633, 0, 0.186, 0)
+	
+	local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Sine, Enum.EasingDirection.Out)
+	
+	-- Duruma göre pozisyona yumuşakça oturtma fonksiyonu
+	local function snapToPosition(state)
+		isOn = state
+		local targetPosition = isOn and onPosition or offPosition
+		local targetColor = isOn and onColor or offColor
+	
+		TweenService:Create(circle, tweenInfo, {
+			Position = targetPosition,
+			BackgroundColor3 = targetColor
+		}):Play()
+	
+		-- --- ARAYÜZÜ GÖRÜNÜR / GÖRÜNMEZ YAPMA ---
+		if externalsMenu then
+			externalsMenu.Visible = isOn
+		end
+	
+		-- Tetiklenecek fonksiyonlar
+		if isOn then
+			print("Özellik Açıldı!")
+		else
+			print("Özellik Kapandı!")
+		end
+	end
+	
+	-- Sürükleme başladığında
+	circle.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			isDragging = true
+		end
+	end)
+	
+	-- Mouse hareket ettikçe yuvarlağı takip ettirme
+	UserInputService.InputChanged:Connect(function(input)
+		if isDragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+			-- Arka planın genişliğini ve mouse'un o anki yerini hesaplıyoruz
+			local bgX = background.AbsolutePosition.X
+			local bgWidth = background.AbsoluteSize.X
+			local mouseX = input.Position.X
+	
+			-- Yeni X pozisyonunu yüzdelik (Scale) olarak hesapla
+			local newX = (mouseX - bgX) / bgWidth
+	
+			-- Yuvarlağın dışarı taşmasını engelle
+			newX = math.clamp(newX, 0.092, 0.633)
+	
+			-- Yuvarlağın sadece X ekseninde hareket etmesini sağla
+			circle.Position = UDim2.new(newX, 0, circle.Position.Y.Scale, 0)
+		end
+	end)
+	
+	-- Mouse bırakıldığında
+	UserInputService.InputEnded:Connect(function(input)
+		if isDragging and (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then
+			isDragging = false
+	
+			-- Bırakıldığı yer butonun ortasından sağda mı solda mı?
+			local currentX = circle.Position.X.Scale
+			local midPoint = (0.092 + 0.633) / 2
+	
+			if currentX >= midPoint then
+				snapToPosition(true)
+			else
+				snapToPosition(false)
+			end
+		end
+	end)
+	
+	-- İlk başlangıçta kapalı başlasın
+	snapToPosition(false)
+end;
+task.spawn(C_1f);
+-- StarterGui.Haçker Guyi.Frame.Smooth Drag
+local function C_28()
+local script = G2L["28"];
+	local UserInputService = game:GetService("UserInputService")
+	local TweenService = game:GetService("TweenService")
+	
+	local guiFrame = script.Parent -- Bu scripti ana menü çerçevesinin içine koymalısın
+	
+	local dragging = false
+	local dragInput, dragStart, startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		-- Yeni pozisyonu yumuşakça hesaplıyoruz
+		local targetPos = UDim2.new(
+			startPos.X.Scale, 
+			startPos.X.Offset + delta.X, 
+			startPos.Y.Scale, 
+			startPos.Y.Offset + delta.Y
+		)
+	
+		-- Smooth hareket için TweenInfo kullanıyoruz (0.12 saniyede yağ gibi kayar)
+		local tweenInfo = TweenInfo.new(0.12, Enum.EasingStyle.Sine, Enum.EasingDirection.Out)
+		local tween = TweenService:Create(guiFrame, tweenInfo, {Position = targetPos})
+		tween:Play()
+	end
+	
+	-- Menünün üzerine basıldığında
+	guiFrame.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = guiFrame.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	-- Menü üzerinde mouse hareket ettiğinde
+	guiFrame.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	-- Ekranın genelinde mouse hareketini takip etme
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end;
+task.spawn(C_28);
+-- StarterGui.Haçker Guyi.Frame.LocalScript
+local function C_29()
+local script = G2L["29"];
+	local UserInputService = game:GetService("UserInputService")
+	local TweenService = game:GetService("TweenService")
+	
+	local mainFrame = script.Parent -- Bu scripti ana menü çerçevesinin içine koymalısınız
+	local screenGui = mainFrame.Parent
+	
+	-- --- 1. UYARI ETİKETİNİ KODLA OLUŞTURUYORUZ ---
+	local hintLabel = Instance.new("TextLabel")
+	hintLabel.Name = "InsertHint"
+	hintLabel.Size = UDim2.new(0, 200, 0, 35)
+	hintLabel.Position = UDim2.new(1, -210, 0.5, -17) -- Ekranın sağ ortasında duracak
+	hintLabel.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+	hintLabel.BorderSizePixel = 1
+	hintLabel.BorderColor3 = Color3.fromRGB(255, 0, 0) -- Kırmızı kenarlık
+	hintLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+	hintLabel.Text = "Menüyü açmak için 'Del'e bas!"
+	hintLabel.Font = Enum.Font.GothamMedium
+	hintLabel.TextSize = 13
+	hintLabel.Visible = false -- Başlangıçta kapalı
+	hintLabel.Parent = screenGui
+	
+	-- UI Corner (Yazı kutusuna hafif yuvarlaklık verir)
+	local corner = Instance.new("UICorner")
+	corner.CornerRadius = UDim.new(0, 6)
+	corner.Parent = hintLabel
+	
+	
+	-- --- 2. AÇMA / KAPAMA MANTIĞI ---
+	local isOpen = true
+	local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Sine, Enum.EasingDirection.Out)
+	
+	local function toggleMenu()
+		isOpen = not isOpen
+	
+		if isOpen then
+			-- Menüyü yumuşakça gösteriyoruz
+			mainFrame.Visible = true
+			TweenService:Create(mainFrame, tweenInfo, {Size = UDim2.new(0, 569, 0, 483)}):Play() -- Boyutu kendi menü boyutuna göre ayarlayabilirsin
+	
+			-- Yandaki uyarı yazısını gizliyoruz
+			hintLabel.Visible = false
+		else
+			-- Menüyü kapatıyoruz
+			mainFrame.Visible = false
+	
+			-- Yandaki uyarı yazısını gösteriyoruz
+			hintLabel.Visible = true
+			-- Yazıya küçük bir animasyon (Belirme efekti)
+			hintLabel.TextTransparency = 1
+			TweenService:Create(hintLabel, tweenInfo, {TextTransparency = 0}):Play()
+		end
+	end
+	
+	-- Klavyeden tuş basımını dinliyoruz
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		-- Eğer oyuncu o sırada sohbet (chat) kısmına yazıyorsa hile menüsü açılıp kapanmasın diye kontrol ediyoruz
+		if gameProcessed then return end
+	
+		if input.KeyCode == Enum.KeyCode.Delete then
+			toggleMenu()
+		end
+	end)
+end;
+task.spawn(C_29);
+-- StarterGui.Haçker Guyi.ExternalsGui.ButtonsFrame.InfYield.LocalScript
+local function C_2d()
+local script = G2L["2d"];
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+	end)
+	
+end;
+task.spawn(C_2d);
+-- StarterGui.Haçker Guyi.ExternalsGui.ButtonsFrame.Esp.LocalScript
+local function C_30()
+local script = G2L["30"];
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/testgmaail00-lab/chaos/refs/heads/main/esp"))()
+	end)
+end;
+task.spawn(C_30);
+-- StarterGui.Haçker Guyi.ExternalsGui.Smooth Drag
+local function C_33()
+local script = G2L["33"];
+	local UserInputService = game:GetService("UserInputService")
+	local TweenService = game:GetService("TweenService")
+	
+	local guiFrame = script.Parent -- Bu scripti ana menü çerçevesinin içine koymalısın
+	
+	local dragging = false
+	local dragInput, dragStart, startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		-- Yeni pozisyonu yumuşakça hesaplıyoruz
+		local targetPos = UDim2.new(
+			startPos.X.Scale, 
+			startPos.X.Offset + delta.X, 
+			startPos.Y.Scale, 
+			startPos.Y.Offset + delta.Y
+		)
+	
+		-- Smooth hareket için TweenInfo kullanıyoruz (0.12 saniyede yağ gibi kayar)
+		local tweenInfo = TweenInfo.new(0.12, Enum.EasingStyle.Sine, Enum.EasingDirection.Out)
+		local tween = TweenService:Create(guiFrame, tweenInfo, {Position = targetPos})
+		tween:Play()
+	end
+	
+	-- Menünün üzerine basıldığında
+	guiFrame.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = guiFrame.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	-- Menü üzerinde mouse hareket ettiğinde
+	guiFrame.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	-- Ekranın genelinde mouse hareketini takip etme
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end;
+task.spawn(C_33);
+-- StarterGui.Haçker Guyi.TrollGui.Smooth Drag
+local function C_3c()
+local script = G2L["3c"];
+	local UserInputService = game:GetService("UserInputService")
+	local TweenService = game:GetService("TweenService")
+	
+	local guiFrame = script.Parent -- Bu scripti ana menü çerçevesinin içine koymalısın
+	
+	local dragging = false
+	local dragInput, dragStart, startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		-- Yeni pozisyonu yumuşakça hesaplıyoruz
+		local targetPos = UDim2.new(
+			startPos.X.Scale, 
+			startPos.X.Offset + delta.X, 
+			startPos.Y.Scale, 
+			startPos.Y.Offset + delta.Y
+		)
+	
+		-- Smooth hareket için TweenInfo kullanıyoruz (0.12 saniyede yağ gibi kayar)
+		local tweenInfo = TweenInfo.new(0.12, Enum.EasingStyle.Sine, Enum.EasingDirection.Out)
+		local tween = TweenService:Create(guiFrame, tweenInfo, {Position = targetPos})
+		tween:Play()
+	end
+	
+	-- Menünün üzerine basıldığında
+	guiFrame.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = guiFrame.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	-- Menü üzerinde mouse hareket ettiğinde
+	guiFrame.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	-- Ekranın genelinde mouse hareketini takip etme
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end;
+task.spawn(C_3c);
+-- StarterGui.Haçker Guyi.SkinChanger.Smooth Drag
+local function C_44()
+local script = G2L["44"];
+	local UserInputService = game:GetService("UserInputService")
+	local TweenService = game:GetService("TweenService")
+	
+	local guiFrame = script.Parent -- Bu scripti ana menü çerçevesinin içine koymalısın
+	
+	local dragging = false
+	local dragInput, dragStart, startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		-- Yeni pozisyonu yumuşakça hesaplıyoruz
+		local targetPos = UDim2.new(
+			startPos.X.Scale, 
+			startPos.X.Offset + delta.X, 
+			startPos.Y.Scale, 
+			startPos.Y.Offset + delta.Y
+		)
+	
+		-- Smooth hareket için TweenInfo kullanıyoruz (0.12 saniyede yağ gibi kayar)
+		local tweenInfo = TweenInfo.new(0.12, Enum.EasingStyle.Sine, Enum.EasingDirection.Out)
+		local tween = TweenService:Create(guiFrame, tweenInfo, {Position = targetPos})
+		tween:Play()
+	end
+	
+	-- Menünün üzerine basıldığında
+	guiFrame.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = guiFrame.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	-- Menü üzerinde mouse hareket ettiğinde
+	guiFrame.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	-- Ekranın genelinde mouse hareketini takip etme
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end;
+task.spawn(C_44);
+
+return G2L["1"], require;
